@@ -29,8 +29,15 @@ def generate_population(picture_list: list, population: list, pop_size: int):
     return population
 
 
-def create_individual():
+def create_individual(pictures):
     individual = []
+    v_pics = []
+    h_pics = []
+    for index, pic in enumerate(pictures):
+        if pic['type'] == 'V':
+            v_pics.append(index)
+        else:
+            h_pics.append(index)
     random.shuffle(v_pics)
     for pic1, pic2 in grouper(v_pics, 2):
         individual.append([pic1, pic2])
