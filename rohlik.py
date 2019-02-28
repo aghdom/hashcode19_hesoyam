@@ -19,34 +19,3 @@ def evaluate(individual, pics):
         score += min(len(common), len(only_in_prev), len(only_in_cur))
         prev_tags = cur_tags
     return score
-
-
-ind = [
-    [0],
-    [1,2],
-    [3],
-
-]
-
-pics = [
-    {
-        'type': 'H',
-        'tags': set(['a','b','c'])
-    },
-    {
-        'type': 'V',
-        'tags': set(['a','b'])
-    },
-    {
-        'type': 'V',
-        'tags': set(['b','d'])
-    },
-    {
-        'type': 'H',
-        'tags': set(['d','e','c'])
-    }
-]
-
-
-
-evaluate(ind, pics)
