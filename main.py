@@ -1,3 +1,5 @@
+from rohlik import evaluate
+
 # import random
 # from deap import tools, base, creator
 #
