@@ -7,6 +7,8 @@ def get_tags(slide, pics):
 
 
 def evaluate(individual, pics):
+    if len(individual) <= 1:
+        return 0
     score = 0
     prev_tags = get_tags(individual[0], pics)
     for slide in individual[1:]:
